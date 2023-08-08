@@ -3,7 +3,7 @@
     x:Class="App01.MainPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:behavior="clr-namespace:App01.lib">
+    xmlns:lib="clr-namespace:App01.lib">
 
     <StackLayout>
 
@@ -13,11 +13,49 @@
             VerticalOptions="Center" />
 
 
-        <Entry Placeholder="Digite o seu nome">
+        <Entry x:Name="txtNome" Placeholder="Digite o seu nome">
             <Entry.Behaviors>
-                <behavior:MaiusculoBehavior />
+                <lib:MaiusculoBehavior />
             </Entry.Behaviors>
+            <Entry.Triggers>
+                <!--  Quando o foco estiver true  -->
+                <Trigger TargetType="Entry" Property="IsFocused" Value="true">
+                    <Setter Property="BackgroundColor" Value="Blue" />
+                    <Setter Property="TextColor" Value="White" />
+                </Trigger>
+                <Trigger TargetType="Entry" Property="IsFocused" Value="false">
+                    <Setter Property="BackgroundColor" Value="Green" />
+                    <Setter Property="TextColor" Value="Yellow" />
+                </Trigger>
+            </Entry.Triggers>
         </Entry>
+
+
+        <Entry x:Name="txtEmail" Placeholder="Digite o seu email">
+            <Entry.Triggers>
+                <EventTrigger Event="TextChanged">
+                    <lib:EmailValidoTrigger />
+                </EventTrigger>
+            </Entry.Triggers>
+        </Entry>
+
+        <Button
+            BackgroundColor="Azure"
+            Text="Enviar"
+            TextColor="Black">
+            <Button.Triggers>
+                <!--  Referenciando TXT Nome e pegando quantos caracteres ela tem  -->
+                <DataTrigger
+                    Binding="{Binding Source={x:Reference txtNome}, Path=Text.Length}"
+                    TargetType="Button"
+                    Value="0">
+                    <Setter Property="TextColor" Value="White" />
+                    <Setter Property="BackgroundColor" Value="Gray" />
+                    <Setter Property="IsEnabled" Value="False" />
+                </DataTrigger>
+
+            </Button.Triggers>
+        </Button>
 
     </StackLayout>
 
