@@ -1,24 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App02.MainPage">
+<ContentPage
+    x:Class="App02.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+
+
+        <!--
+            GroupDisplayBinding="{Binding Titulo}"
+            GroupShortNameBinding="{Binding TituloCurto}"
+        -->
+        <ListView x:Name="ListaFuncionarios" IsGroupingEnabled="True">
+            <ListView.Header>
+                <Label
+                    Padding="30,10,30,10"
+                    FontSize="Title"
+                    HorizontalOptions="Center"
+                    Text="Header!"
+                    VerticalOptions="Center" />
+            </ListView.Header>
+
+            <ListView.Footer>
+                <Label
+                    Padding="30,10,30,10"
+                    FontSize="Title"
+                    HorizontalOptions="Center"
+                    Text="Footer"
+                    VerticalOptions="Center" />
+            </ListView.Footer>
+
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Margin="15,0,0,0">
+                            <Label Text="{Binding Titulo}" />
+                            <Label Text="{Binding Descricao}" TextColor="LightGray" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Nome}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
 
 </ContentPage>
