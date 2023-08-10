@@ -25,26 +25,25 @@ namespace App02
 
                 new Grupo("Presidentes", "CEO", "Presidente da empresa")
                 {
-                    new Pessoa(){ Nome = "Rafael"},
-                    new Pessoa(){ Nome = "Renato"},
+                    new Pessoa(){ Nome = "Rafael", EhObrigatorio=true, Eficiencia = 8},
                 },
                 new Grupo("Diretores", "Dir.", "Diretor da empresa")
                 {
-                    new Pessoa(){ Nome = "Richard"},
-                    new Pessoa(){ Nome = "Brenno"},
+                    new Pessoa(){ Nome = "Richard" , EhObrigatorio=false},
+                    new Pessoa(){ Nome = "Brenno",  EhObrigatorio=true, Eficiencia = 8},
                 },
                  new Grupo("Gerentes", "Ger.", "Gerente da empresa")
                 {
-                    new Pessoa(){ Nome = "Ivaldo"},
-                    new Pessoa(){ Nome = "Luiz"}
+                    new Pessoa(){ Nome = "Ivaldo" , EhObrigatorio=true, Eficiencia = 7},
+                    new Pessoa(){ Nome = "Luiz" , EhObrigatorio=false, Eficiencia = 9}
                 },
                 new Grupo("Colaboradores", "Colab.", "Colaboradores da empresa")
                 {
-                    new Pessoa(){ Nome = "Daniel"},
-                    new Pessoa(){ Nome = "Debora"},
-                    new Pessoa(){ Nome = "Alex"},
-                    new Pessoa(){ Nome = "Vander"},
-                    new Pessoa(){ Nome = "Milton"},
+                    new Pessoa(){ Nome = "Daniel" , EhObrigatorio=false},
+                    new Pessoa(){ Nome = "Debora" , EhObrigatorio=false},
+                    new Pessoa(){ Nome = "Alex" , EhObrigatorio=false},
+                    new Pessoa(){ Nome = "Vander" , EhObrigatorio=false},
+                    new Pessoa(){ Nome = "Milton" , EhObrigatorio=false},
                 }
             };
         }
@@ -66,6 +65,8 @@ namespace App02
         public class Pessoa 
         {
             public string Nome { get; set; }
+            public int Eficiencia { get; set; }
+            public bool EhObrigatorio { get; set; }
         }
     }
 }
