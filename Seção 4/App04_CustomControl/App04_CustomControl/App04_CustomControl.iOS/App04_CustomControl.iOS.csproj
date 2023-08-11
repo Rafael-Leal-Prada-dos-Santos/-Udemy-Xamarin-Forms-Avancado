@@ -133,4 +133,13 @@
       <Name>App04_CustomControl</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imagem.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imagem3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imagem2.jpg" />
+  </ItemGroup>
 </Project>

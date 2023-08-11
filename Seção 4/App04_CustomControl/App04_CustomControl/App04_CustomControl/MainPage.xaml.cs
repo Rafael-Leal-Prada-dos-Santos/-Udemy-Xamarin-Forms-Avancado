@@ -14,5 +14,10 @@ namespace App04_CustomControl
         {
             InitializeComponent();
         }
+
+        private void MeuControlePersonalizado_Tocado(object sender, EventArgs e)
+        {
+            DisplayAlert("Alerta", "Sou um evento", "Ok.");
+        }
     }
 }
