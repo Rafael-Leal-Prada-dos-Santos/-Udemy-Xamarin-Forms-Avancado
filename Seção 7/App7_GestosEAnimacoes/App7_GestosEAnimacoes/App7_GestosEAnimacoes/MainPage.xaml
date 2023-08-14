@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App7_GestosEAnimacoes.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <AbsoluteLayout x:Name="Container">
+        <Label
+            x:Name="MinhaLabel"
+            Padding="30,10,30,10"
+            FontSize="Title"
+            Text="Start developing now">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Label.GestureRecognizers>
+        </Label>
+
+        <BoxView
+            x:Name="MeuBoxView"
+            HeightRequest="50"
+            WidthRequest="50"
+            Color="Green" />
+    </AbsoluteLayout>
+
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App04_CustomControl.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controles="clr-namespace:App04_CustomControl.Controles">
+
+    <StackLayout>
+        <controles:MeuControlePersonalizado
+            Imagem="imagem.jpg"
+            Titulo="Titulo x1"
+            TituloCor="Red"
+            Tocado="MeuControlePersonalizado_Tocado" />
+        <controles:MeuControlePersonalizado
+            Imagem="imagem2.jpg"
+            Titulo="Titulo x2"
+            TituloCor="Blue" />
+        <controles:MeuControlePersonalizado
+            Imagem="imagem3.png"
+            Titulo="Titulo x3"
+            TituloCor="Green" />
+    </StackLayout>
+
+</ContentPage>

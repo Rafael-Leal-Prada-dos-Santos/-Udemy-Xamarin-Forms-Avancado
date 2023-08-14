@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App05_ControleCustomizadoNativo.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controlePersonalizado="clr-namespace:App05_ControleCustomizadoNativo.ControlesPersonalizados">
+
+    <StackLayout>
+        <Label
+            FontSize="36"
+            HorizontalTextAlignment="Center"
+            Text="Welcome to Xamarin.Forms!"
+            TextColor="White" />
+
+        <controlePersonalizado:BoxViewCustomizado
+            BindingContext="{x:Reference sliderEspessura}"
+            Espessura="{Binding Path=Value}"
+            HeightRequest="200"
+            HorizontalOptions="Center"
+            WidthRequest="200" />
+
+        <Slider
+            x:Name="sliderEspessura"
+            Maximum="100"
+            Minimum="0" />
+
+    </StackLayout>
+
+</ContentPage>
