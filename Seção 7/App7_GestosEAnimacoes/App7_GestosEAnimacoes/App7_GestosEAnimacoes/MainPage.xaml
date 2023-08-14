@@ -4,9 +4,9 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <StackLayout>
-
+    <AbsoluteLayout x:Name="Container">
         <Label
+            x:Name="MinhaLabel"
             Padding="30,10,30,10"
             FontSize="Title"
             Text="Start developing now">
@@ -15,6 +15,11 @@
             </Label.GestureRecognizers>
         </Label>
 
-    </StackLayout>
+        <BoxView
+            x:Name="MeuBoxView"
+            HeightRequest="50"
+            WidthRequest="50"
+            Color="Green" />
+    </AbsoluteLayout>
 
 </ContentPage>
