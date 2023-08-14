@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App06_DetectandoSO.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <StackLayout x:Name="Container">
+
+        <Label
+            Padding="30,10,30,10"
+            FontSize="Title"
+            Text="Start developing now">
+
+            <Label.FontSize>
+                <OnIdiom
+                    x:TypeArguments="x:Double"
+                    Phone="30"
+                    Tablet="100" />
+            </Label.FontSize>
+            <Label.TextColor>
+                <OnPlatform x:TypeArguments="Color">
+                    <On Platform="Android">Green</On>
+                    <On Platform="UWP">Red</On>
+                </OnPlatform>
+            </Label.TextColor>
+        </Label>
+
+    </StackLayout>
+
+</ContentPage>
