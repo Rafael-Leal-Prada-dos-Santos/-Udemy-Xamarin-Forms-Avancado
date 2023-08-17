@@ -120,4 +120,7 @@
   <data name="MSG_E01" xml:space="preserve">
     <value>O Campo {0} é obrigatório</value>
   </data>
+  <data name="MSG_E02" xml:space="preserve">
+    <value>O Campo {0} é inválido</value>
+  </data>
 </root>

@@ -68,5 +68,14 @@ namespace App09_ValidacaoAnnotation.Lingua {
                 return ResourceManager.GetString("MSG_E01", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O Campo {0} é inválido.
+        /// </summary>
+        internal static string MSG_E02 {
+            get {
+                return ResourceManager.GetString("MSG_E02", resourceCulture);
+            }
+        }
     }
 }

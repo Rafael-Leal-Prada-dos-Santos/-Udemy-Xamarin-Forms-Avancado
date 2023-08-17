@@ -31,7 +31,7 @@ namespace App09_ValidacaoAnnotation
 
                 ValidationContext contexto = new ValidationContext(pessoa);
 
-                bool ehValido = Validator.TryValidateObject(pessoa, contexto, resultadosValidacoes);
+                bool ehValido = Validator.TryValidateObject(pessoa, contexto, resultadosValidacoes, true);
 
                 if (!ehValido)
                 {
