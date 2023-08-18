@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App11_ArmazenamentoEBancoDeDados.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <StackLayout>
+
+        <Label
+            x:Name="lblConteudoArquivo"
+            Padding="30,0,30,0"
+            FontSize="16" />
+        <Button x:Name="btnLerArquivo" Text="Ler Arquivo" />
+
+        <Entry x:Name="txtConteudo" Placeholder="Digite um texto" />
+        <Button
+            x:Name="btnEscrever"
+            Clicked="Escrever_Clicado"
+            Text="Escrever" />
+
+    </StackLayout>
+
+</ContentPage>
