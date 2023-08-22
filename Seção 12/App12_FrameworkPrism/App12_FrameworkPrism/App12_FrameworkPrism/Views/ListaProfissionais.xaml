@@ -6,10 +6,11 @@
     xmlns:prism="http://prismlibrary.com"
     prism:ViewModelLocator.AutowireViewModel="True">
 
-    <ListView ItemsSource="{Binding ListaProf}">
+    <ListView ItemsSource="{Binding ListaProf}" RowHeight="150">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ImageCell
+                    Height="50"
                     Detail="{Binding Especialidade}"
                     ImageSource="{Binding Imagem}"
                     Text="{Binding Nome}"
