@@ -1,5 +1,6 @@
 ﻿using App12_FrameworkPrism.ViewModels;
 using App12_FrameworkPrism.Views;
+using App12_FrameworkPrism_2.Database;
 using Prism;
 using Prism.Ioc;
 using Prism.Unity;
@@ -21,14 +22,16 @@ namespace App12_FrameworkPrism
             //Qual a primeira página
             InitializeComponent();
 
-            NavigationService.NavigateAsync($"NavigationPage/{nameof(LoginPage)}");
+            MassaDados.CriarMassaDados();
+
+            NavigationService.NavigateAsync($"NavigationPage/{nameof(ListaProfissionais)}");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             //Registrar todas  as views
             containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
+            containerRegistry.RegisterForNavigation<ListaProfissionais, ListaProfissionaisViewModel>();
         }
     }
 }

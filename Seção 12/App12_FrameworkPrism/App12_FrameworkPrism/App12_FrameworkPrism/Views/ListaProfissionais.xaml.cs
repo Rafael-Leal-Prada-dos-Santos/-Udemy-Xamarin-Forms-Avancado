@@ -2,9 +2,9 @@
 
 namespace App12_FrameworkPrism.Views
 {
-    public partial class LoginPage : ContentPage
+    public partial class ListaProfissionais : ContentPage
     {
-        public LoginPage()
+        public ListaProfissionais()
         {
             InitializeComponent();
         }
