@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App12_FrameworkPrism.Views.DetalheProfissional"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="http://prismlibrary.com"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <StackLayout>
+        <Label Text="{Binding Profissional.Nome}" />
+        <Image Source="{Binding Profissional.Imagem}" />
+        <Label Text="{Binding Profissional.Descriacao}" />
+        <Label Text="{Binding Profissional.Especialidade}" />
+
+        <ListView HasUnevenRows="True" ItemsSource="{Binding Comentarios}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Autor}" />
+                            <Label Text="{Binding Data}" />
+                            <Label Text="{Binding Descricao}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+
+</ContentPage>

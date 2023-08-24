@@ -32,6 +32,7 @@ namespace App12_FrameworkPrism
             //Registrar todas  as views
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<ListaProfissionais, ListaProfissionaisViewModel>();
+            containerRegistry.RegisterForNavigation<DetalheProfissional, DetalheProfissionalViewModel>();
         }
     }
 }
