@@ -1,8 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:prism="http://prismlibrary.com"
-             prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="App14_LoginSocialOAuth.Views.PaginaInicial">
-  
+<ContentPage
+    x:Class="App14_LoginSocialOAuth.Views.PaginaInicial"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="http://prismlibrary.com"
+    Title="Página Inicial"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Button Command="{Binding ComandoLogarNoFacebook}" Text="Login via Facebook" />
+    </StackLayout>
 </ContentPage>
