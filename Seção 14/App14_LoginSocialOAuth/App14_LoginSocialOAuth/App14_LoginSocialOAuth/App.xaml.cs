@@ -29,6 +29,7 @@ namespace App14_LoginSocialOAuth
             //Registrar todas  as views
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<PaginaInicial, PaginaInicialViewModel>();
+            containerRegistry.RegisterForNavigation<PaginaInicio, PaginaInicioViewModel>();
         }
 
 
