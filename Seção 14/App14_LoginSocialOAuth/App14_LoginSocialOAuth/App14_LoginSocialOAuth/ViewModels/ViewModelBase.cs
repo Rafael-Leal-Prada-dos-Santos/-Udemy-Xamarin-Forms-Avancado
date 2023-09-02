@@ -27,7 +27,7 @@ namespace App14_LoginSocialOAuth.ViewModels
 
         public void OnNavigatedTo(INavigationParameters parameters)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

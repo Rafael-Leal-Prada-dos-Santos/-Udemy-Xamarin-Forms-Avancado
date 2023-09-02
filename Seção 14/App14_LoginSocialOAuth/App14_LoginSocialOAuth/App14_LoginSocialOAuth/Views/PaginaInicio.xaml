@@ -7,5 +7,7 @@
     prism:ViewModelLocator.AutowireViewModel="True">
     <StackLayout>
         <Label Text="Login realizado com sucesso!!" />
+
+        <Label x:Name="lblInformacao" />
     </StackLayout>
 </ContentPage>

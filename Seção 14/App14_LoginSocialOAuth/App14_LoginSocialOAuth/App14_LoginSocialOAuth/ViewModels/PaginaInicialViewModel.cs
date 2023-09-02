@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using App14_LoginSocialOAuth.Views;
+using Prism.Commands;
 using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace App14_LoginSocialOAuth.ViewModels
 
         private void LogarNoFacebook()
         {
-            throw new NotImplementedException();
+            App.Current.MainPage = new LoginFacebook();
         }
     }
 }

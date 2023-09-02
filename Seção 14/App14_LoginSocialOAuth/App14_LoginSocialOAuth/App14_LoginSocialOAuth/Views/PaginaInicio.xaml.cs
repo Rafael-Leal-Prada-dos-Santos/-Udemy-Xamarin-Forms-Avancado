@@ -4,9 +4,14 @@ namespace App14_LoginSocialOAuth.Views
 {
     public partial class PaginaInicio : ContentPage
     {
-        public PaginaInicio()
+        public PaginaInicio(params string[] parametros)
         {
             InitializeComponent();
+
+            foreach (string parametro in parametros) 
+            {
+                lblInformacao.Text += $"{parametro} \n";
+            }
         }
     }
 }
