@@ -11,6 +11,11 @@ namespace App14_LoginSocialOAuth
 {
     public partial class App : PrismApplication
     {
+        public static void NavegarParaInicial(params string[] parametros) 
+        {
+            App.Current.MainPage = new PaginaInicio(parametros);
+        }
+
         public App(IPlatformInitializer inicializador = null) : base(inicializador)
         {
 
@@ -21,7 +26,7 @@ namespace App14_LoginSocialOAuth
             //Qual a primeira página
             InitializeComponent();
 
-            //NavigationService.NavigateAsync($"NavigationPage/{nameof(ListaProfissionais)}");
+            NavigationService.NavigateAsync($"{nameof(PaginaInicial)}");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -29,6 +34,7 @@ namespace App14_LoginSocialOAuth
             //Registrar todas  as views
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<PaginaInicial, PaginaInicialViewModel>();
+            containerRegistry.RegisterForNavigation<PaginaInicio, PaginaInicioViewModel>();
         }
 
 

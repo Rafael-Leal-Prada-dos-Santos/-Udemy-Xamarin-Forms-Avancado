@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using App14_LoginSocialOAuth.Views;
+using Prism.Commands;
 using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
@@ -6,15 +7,8 @@ using System.Linq;
 
 namespace App14_LoginSocialOAuth.ViewModels
 {
-    public class PaginaInicialViewModel : BindableBase
+    public class PaginaInicialViewModel : ViewModelBase
     {
-        private string _title;
-        public string Title 
-        {
-            get => _title;
-            set => SetProperty(ref _title, value);
-        }
-
         public DelegateCommand ComandoLogarNoFacebook { get; set; }
 
         public PaginaInicialViewModel()
@@ -24,7 +18,7 @@ namespace App14_LoginSocialOAuth.ViewModels
 
         private void LogarNoFacebook()
         {
-            throw new NotImplementedException();
+            App.Current.MainPage = new LoginFacebook();
         }
     }
 }

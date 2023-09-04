@@ -57,6 +57,7 @@ namespace App14_LoginSocialOAuth.UWP
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
                 Xamarin.Forms.Forms.Init(e);
+                Xamarin.Auth.Presenters.UWP.AuthenticationConfiguration.Init();
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
