@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App12_FrameworkPrism.Views.DetalheProfissional"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converter="clr-namespace:App12_FrameworkPrism.Converter"
+    xmlns:prism="http://prismlibrary.com"
+    Title="{Binding Profissional.Nome}"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:DataConverter x:Key="ConversorData" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout Spacing="0">
+        <StackLayout Padding="10" BackgroundColor="White">
+            <Image Source="{Binding Profissional.Imagem}" />
+            <Label
+                HorizontalTextAlignment="Center"
+                Text="{Binding Profissional.Nome}"
+                TextColor="Black" />
+            <Label
+                HorizontalTextAlignment="Center"
+                Text="{Binding Profissional.Especialidade}"
+                TextColor="Gray" />
+        </StackLayout>
+        <StackLayout BackgroundColor="#AAA">
+            <Label Text="{Binding Profissional.Descriacao}" TextColor="Gray" />
+        </StackLayout>
+
+        <ListView
+            HasUnevenRows="True"
+            ItemsSource="{Binding Comentarios}"
+            SeparatorColor="Gray">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10" BackgroundColor="#F5F5F5">
+                            <StackLayout Orientation="Horizontal">
+                                <Label
+                                    FontAttributes="Bold"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="{Binding Autor}"
+                                    TextColor="Black" />
+                                <Label
+                                    HorizontalOptions="EndAndExpand"
+                                    Text="{Binding Data, Converter={StaticResource ConversorData}}"
+                                    TextColor="#CCC" />
+                            </StackLayout>
+
+                            <Label Text="{Binding Descricao}" TextColor="Gray" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+
+</ContentPage>

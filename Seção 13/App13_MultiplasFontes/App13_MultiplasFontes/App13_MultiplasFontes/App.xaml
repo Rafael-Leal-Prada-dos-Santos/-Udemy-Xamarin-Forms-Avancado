@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="App13_MultiplasFontes.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style x:Key="EstiloLabelFonte" TargetType="Label">
+                <Setter Property="Label.FontFamily">
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="lourod.ttf#lourod" />
+                        <On Platform="iOS" Value="lourod" />
+                        <On Platform="UWP" Value="Assets/Fonts/lourod.ttf#lourod" />
+                    </OnPlatform>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

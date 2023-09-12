@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App12_ArmazenamentoEBandoDeDados.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <StackLayout>
+        <StackLayout>
+            <Entry x:Name="ID" IsVisible="false" />
+            <Entry x:Name="Item" Placeholder="Digite o item" />
+            <Entry
+                x:Name="Quantidade"
+                Keyboard="Numeric"
+                Placeholder="Digite a Quantidade" />
+            <Button
+                x:Name="BtnAdicionar"
+                Clicked="BtnAdicionar_Clicked"
+                Text="Salvar" />
+        </StackLayout>
+
+        <StackLayout>
+            <ListView x:Name="Lista">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Detail="{Binding Quantidade}" Text="{Binding Item}">
+                            <TextCell.ContextActions>
+                                <MenuItem
+                                    Clicked="Excluir_Clidado"
+                                    CommandParameter="{Binding .}"
+                                    Text="Excluir" />
+
+                                <MenuItem
+                                    Clicked="Atualizar_Clidado"
+                                    CommandParameter="{Binding .}"
+                                    Text="Editar" />
+                            </TextCell.ContextActions>
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App09_ValidacaoAnnotation.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <StackLayout>
+        <Label x:Name="LblMSG" />
+        <Entry x:Name="TxtNome" Placeholder="Digite o nome" />
+        <Entry x:Name="TxtEmail" Placeholder="Digite o e-mail" />
+        <Entry x:Name="TxtCPF" Placeholder="Digite o CPF" />
+        <Button x:Name="BtnSalvar" />
+    </StackLayout>
+
+</ContentPage>
